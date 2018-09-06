@@ -78,7 +78,7 @@ public class Firstclass {
       Utils.log("salary", trainer.salary+"");
       
      JavaTrainer javaTrainer = new JavaTrainer();
-     Person person = new Person();
+     Person person = new Person() {};
       
     }
     
