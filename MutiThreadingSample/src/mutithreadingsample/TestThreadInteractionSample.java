@@ -13,11 +13,12 @@ public class TestThreadInteractionSample {
     
     public void testInteraction() {
         final ThreadInteractionSample c = new ThreadInteractionSample();
-        new Thread() {
+        Thread th = new Thread() {
             public void run() {
                 c.withdraw(15000);
             }
-        }.start();
+        };
+        th.start();
         new Thread() {
             public void run() {
                 c.deposit(10000);

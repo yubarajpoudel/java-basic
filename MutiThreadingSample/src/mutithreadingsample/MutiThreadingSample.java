@@ -21,22 +21,21 @@ public class MutiThreadingSample {
 //        Thread thread1 = new Thread(new Runnable() {
 //            @Override
 //            public void run() {
-////                sc.print1To10Numbers();
-//                  sc.print1To5Numbers();
+//                sc.print1To10Numbers();
+////                  sc.print1To5Numbers();
 //            }
 //        });
 //        Thread thread2 = new Thread(new Runnable() {
 //            @Override
 //            public void run() {
-////                sc.print1To10Numbers();
-//                  sc.print1To5Numbers();
+//                sc.print1To10Numbers();
+////                  sc.print1To5Numbers();
 //            }
 //        });
 //        thread1.start();
 //        thread2.start();
         
-        TestThreadInteractionSample sample = new TestThreadInteractionSample();
-        sample.testInteraction();
+       new TestThreadInteractionSample().testInteraction();
     }
     
 }
