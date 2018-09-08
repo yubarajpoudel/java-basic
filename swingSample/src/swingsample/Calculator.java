@@ -5,30 +5,29 @@
  */
 package swingsample;
 
-import java.awt.Label;
+import static com.sun.java.accessibility.util.AWTEventMonitor.addWindowListener;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author yubaraj
  */
-public class Calculator extends JFrame implements ActionListener {
+public class Calculator extends JFrame implements ActionListener, WindowListener{
     TextField inputFieldA, inputFieldB;
     JButton buttonAdd,  buttonSubract;
-     JLabel label ;
+    JLabel label ;
     public Calculator(){
         super("Calculator");
         initComponents();
-        buttonAdd.addActionListener(this);
-        buttonSubract.addActionListener(this);
-        setSize(400, 400);
-        setLayout(null);
-        setVisible(true);       
     }
 
     private void initComponents() {
@@ -52,8 +51,13 @@ public class Calculator extends JFrame implements ActionListener {
        add(buttonAdd);
        add(buttonSubract);
        add(label); 
-       
-       
+       buttonAdd.addActionListener(this);
+       buttonSubract.addActionListener(this);
+       setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+       setSize(400, 400);
+       setLayout(null);    
+       setVisible(true);  
+       addWindowListener(this);
     }
 
     @Override
@@ -67,5 +71,48 @@ public class Calculator extends JFrame implements ActionListener {
             label.setText("Difference is " + (numA - numB));
        }
     }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        System.out.println("DialogBOx");
+        String ObjButtons[] = {"Yes","No"};
+        int PromptResult = JOptionPane.showOptionDialog(null,"Are you sure you want to exit?","Calculator",JOptionPane.DEFAULT_OPTION,JOptionPane.WARNING_MESSAGE,null,ObjButtons,ObjButtons[1]);
+        if(PromptResult==JOptionPane.YES_OPTION)
+        {
+            System.exit(0);
+        }
+    }
+
+    @Override
+    public void windowOpened(WindowEvent e) {
+        System.out.println("windowOpened");
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+        System.out.println("windowClosed");
+    }
+
+    @Override
+    public void windowIconified(WindowEvent e) {
+        System.out.println("window iconified");
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+        System.out.println("window deiconified");
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+        System.out.println("Window activated");
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+        System.out.println("window deActivated");
+    }
+
+    
     
 }
