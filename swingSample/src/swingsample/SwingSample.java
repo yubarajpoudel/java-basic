@@ -27,7 +27,12 @@ JDesktopPane desk;
 //        ButtonSample sample = new ButtonSample();
 //        SwingSample d = new SwingSample();
 //          Quiz quiz = new Quiz();
-        JAVASwingFormExample example = new JAVASwingFormExample();
+//        JAVASwingFormExample example = new JAVASwingFormExample();
+//        CardlayoutSample cardLayout = new CardlayoutSample();
+//        cardLayout.showUi();
+          
+          FlowLayoutSample sample = new FlowLayoutSample("sample");
+          sample.showUI();
     }
     
      public SwingSample() {
