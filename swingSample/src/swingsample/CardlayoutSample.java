@@ -26,7 +26,7 @@ public class CardlayoutSample implements ItemListener {
         JPanel comboBoxPane = new JPanel(); //use FlowLayout
         String comboBoxItems[] = { BUTTONPANEL, TEXTPANEL };
         JComboBox cb = new JComboBox(comboBoxItems);
-        cb.setEditable(false);
+//        cb.setEditable(false);
         cb.addItemListener(this);
         comboBoxPane.add(cb);
          
@@ -68,8 +68,7 @@ public class CardlayoutSample implements ItemListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          
         //Create and set up the content pane.
-        CardlayoutSample demo = new CardlayoutSample();
-        demo.addComponentToPane(frame.getContentPane());
+        addComponentToPane(frame.getContentPane());
          
         //Display the window.
         // The pack method sizes the frame so that all its contents are at or above their preferred sizes. 

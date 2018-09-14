@@ -32,7 +32,7 @@ public class FlowLayoutSample extends JFrame{
         super(name);
     }
      
-    public void addComponentsToPane(final Container pane) {
+    public void addComponentsToPane() {
         final JPanel compsToExperiment = new JPanel();
         compsToExperiment.setLayout(experimentLayout);
         experimentLayout.setAlignment(FlowLayout.TRAILING);
@@ -83,8 +83,8 @@ public class FlowLayoutSample extends JFrame{
             }
         });
         
-        pane.add(compsToExperiment);
-        pane.add(controls, BorderLayout.SOUTH); ;
+        getContentPane().add(compsToExperiment);
+        getContentPane().add(controls, BorderLayout.SOUTH); ;
     }
      
     /**
@@ -94,13 +94,13 @@ public class FlowLayoutSample extends JFrame{
      */
     private void createAndShowGUI() {
         //Create and set up the window.
-        FlowLayoutSample frame = new FlowLayoutSample("FlowLayoutSample");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        FlowLayoutSample frame = new FlowLayoutSample("FlowLayoutSample");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //Set up the content pane.
-        frame.addComponentsToPane(frame.getContentPane());
+        addComponentsToPane();
         //Display the window.
-        frame.pack();
-        frame.setVisible(true);
+        pack();
+        setVisible(true);
     }
      
     public void showUI() {
