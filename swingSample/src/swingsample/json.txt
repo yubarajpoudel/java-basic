@@ -1,0 +1,63 @@
+json is a string format
+json stands for javascript object notation
+basically json are of two type
+jsonobject and next jsonarray .
+
+JSON object
+
+ - rules
+ 	1. JSON Object begins with { and ends with }
+ 	2. JSON object has key and value
+ 	3. key is always string (i.e. key is always in invertedcomma "")
+ 	4. key and value is seprated by :
+ 	5. value can be anything including null
+ 	6. multiple key is separated by ,
+
+JSONArray
+ - rules
+   JSONArray can have any values
+   multiple datas are separated by ,
+   JSONArray elements are indexed from 0 to jsonarray size-1
+
+
+Example of jSONObject
+ 
+   {
+    "s.n.": 1,
+    "firstname": "yubaraj",
+    "lastname": "poudel",
+    "skills": {
+	    			"language": "Java",
+	    			"ide": "netbeans",
+	    			"version": 8
+   				 },
+	"isTrainer": true,
+	"weight": 84.5   
+   }
+
+
+Example of JSONArray
+
+	[
+		{
+			"s.n.": 1,
+	    	"firstname": "yubaraj",
+	    	"lastname": "poudel"
+		},
+		{
+			"s.n.": 1,
+	    	"firstname": "yubaraj",
+	    	"lastname": "poudel"
+		},
+		{
+			"s.n.": 1,
+	    	"firstname": "yubaraj",
+	    	"lastname": "poudel"
+		},
+		{
+			"s.n.": 1,
+	    	"firstname": "yubaraj",
+	    	"lastname": "poudel"
+		},
+
+	] 
