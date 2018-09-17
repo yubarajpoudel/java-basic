@@ -28,11 +28,11 @@ JDesktopPane desk;
 //        SwingSample d = new SwingSample();
 //          Quiz quiz = new Quiz();
 //        JAVASwingFormExample example = new JAVASwingFormExample();
-//        CardlayoutSample cardLayout = new CardlayoutSample();
-//        cardLayout.showUi();
+        TableDemo tabledemo = new TableDemo();
+        tabledemo.showUI();
           
-          FlowLayoutSample sample = new FlowLayoutSample("sample");
-          sample.showUI();
+//          FlowLayoutSample sample = new FlowLayoutSample("sample");
+//          sample.showUI();
     }
     
      public SwingSample() {
