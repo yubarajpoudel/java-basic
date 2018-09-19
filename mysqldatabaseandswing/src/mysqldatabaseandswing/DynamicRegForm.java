@@ -308,13 +308,9 @@ public class DynamicRegForm extends RegisterFormGUI{
                         nameField.setText(""+table.getModel().getValueAt(r,2));
 
                         if(table.getModel().getValueAt(r,3).equals("Male"))
-
                               male.setSelected(true);
-
                         else
-
                               female.setSelected(true);
-
                         addressField.setText(""+table.getModel().getValueAt(r,4));
 
                         contactField.setText(""+table.getModel().getValueAt(r,5));
