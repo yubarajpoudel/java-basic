@@ -7,6 +7,7 @@ package swingsample;
 
 import static java.util.logging.Logger.global;
 import jdk.nashorn.internal.parser.JSONParser;
+import org.json.simple.JSONArray;
 
 /**
  *
@@ -15,7 +16,7 @@ import jdk.nashorn.internal.parser.JSONParser;
 
 public class JSONTest {
          
-        globla String dataFromFile = "[\n" +
+        String dataFromFile = "[\n" +
 "		{\n" +
 "			\"s.n.\": 1,\n" +
 "	    	\"firstname\": \"yubaraj\",\n" +
@@ -40,7 +41,8 @@ public class JSONTest {
 "	] ";
             
             public void parseJSON(){
-                JSONParser parser = new JSONParser(dataFromFile, global, true);
+                JSONArray jarr = new JSONArray();
+                
                 
             }
     
