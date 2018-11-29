@@ -12,3 +12,5 @@
  10. Swing forms and layout
  11. Swing and mysql database sample
  12. Servlet
+ 
+ https://search.maven.org/artifact/fr.uha.ensisa.ff/spring-mvc-archetype/1.0.3/maven-archetype
